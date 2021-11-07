@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+
+div {
+    text-align: center;
+}
+
+div h1 {
+    color: #3749b5;
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+}
+
+div form {
+    font-size: 1.5em;
+}
+
+div form input {
+    font-size: 1em;
+    width: 30%;
+}
+
+div form input.btn {
+    background-color: #3749b5;
+    width: 15%;
+    color: white;
+    border-radius: 40px;
+    border-width: 5px;
+    border-color: #4860e4;
+    transition: .5s;
+}
+
+div form input.btn:hover {
+    transform: scale(1.2);
+}
+
+div form select {
+    font-size: 1em;
+    width: 30%;
+}
+
+div.php {
+    margin-top: 30px;
+    font-size: 1.5em;
+}

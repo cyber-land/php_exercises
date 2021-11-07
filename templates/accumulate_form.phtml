@@ -1,0 +1,39 @@
+<?php $this->layout('home', ['title' => 'home']) ?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accumulate</title>
+</head>
+<body>
+<div class="container grid-lg">
+    <h1>Accumulate</h1>
+    <form action="accumulate.php" method="post">
+        <label class="form-label label-lg">Valori (separati da virgole)</label>
+        <br>
+        <input type="text" name="list_numbers" placeholder="7, 9, -12, 23, ..." class="form-input input-lg">
+        <br><br>
+        <label class="form-label label-lg">Operazioni sulla sequenza</label>
+        <br>
+        <select name="operation" class="form-select select-lg">
+            <option value="square">Quadrato</option>
+            <option value="cube">Cubo</option>
+            <option value="square_root">Radice quadrata</option>
+        </select>
+        <br><br>
+        <label class="form-label label-lg">Scegli su quali numeri operare:</label>
+        <br>
+        <label class="form-switch">
+                <input type="checkbox" name="selezione_pari" class="form-input" checked>
+                <i class="form-icon"></i> pari
+        </label>
+        <label class="form-switch">
+            <input type="checkbox" name="selezione_dispari" class="form-input" checked>
+            <i class="form-icon"></i> dispari
+        </label>
+        <br><br>
+        <input class="btn form-input input-lg" type="submit" value="Calcola">
+    </form>
+</div>
+</body>
+</html>

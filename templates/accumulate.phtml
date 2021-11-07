@@ -1,0 +1,27 @@
+<?php
+/**
+ * @var $result
+ * @var $list
+ * @var $operation
+ */
+?>
+
+<?php $this->layout('home', ['title' => 'result']); ?>
+<div class="container grid-lg">
+    <table class="table table-striped table-hover">
+        <thead>
+        <tr>
+            <th>raw number</th>
+            <th>result (<?= $operation ?>)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php for ($i = 0; $i < count($result); $i++) { ?>
+            <tr>
+                <td><?= $list[$i] ?></td>
+                <td><?= $result[$i] ?></td>
+            </tr>
+        <?php } ?>
+        </tbody>
+    </table>
+</div>

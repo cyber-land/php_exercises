@@ -1,0 +1,42 @@
+<?php $this -> layout('home', ['title', 'mutuo'])?>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calcola mutuo</title>
+    <link rel="stylesheet" href="spectre.min.css">
+    <link rel="stylesheet" href="spectre-exp.min.css">
+    <link rel="stylesheet" href="spectre-icons.min.css">
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+</head>
+<body>
+<div class="container grid-lg">
+    <h1>Ammortamento</h1>
+    <h2>Calcola le rate del tuo mutuo! :D</h2>
+    <br>
+    <form action="mutuo.php" method="post">
+        Inserisci il capitale in euro:
+        <br>
+        <input type="text" name="capitale" class="form-input">
+        <br><br>
+        Inserisci l'interesse che ti è stato proposto:
+        <br>
+        <input type="text" name="percentuale" class="form-input">
+        <br><br>
+        Scegli la durata in anni:
+        <br>
+        <select name='durata' class="form-input">
+            <option>5</option>
+            <option>10</option>
+            <option>15</option>
+            <option>20</option>
+            <option>25</option>
+            <option>30</option>
+        </select>
+        <br><br>
+        <input class="btn" type="submit" value="Calcola!">
+    </form>
+</div>
+</body>
+</html>
