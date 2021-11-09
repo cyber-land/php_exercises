@@ -1,0 +1,48 @@
+<?php $this->layout('home', ['title' => 'home']) ?>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ticket</title>
+</head>
+<body>
+<div class="container grid-lg">
+    <h1>Accumulate</h1>
+    <form action="ticket.php" method="post">
+        <label class="form-label label-lg">name</label>
+        <br>
+        <input type="text" name="name" placeholder="name" class="form-input input-lg">
+        <br>
+        <label class="form-label label-lg">surname</label>
+        <br>
+        <input type="text" name="surname" placeholder="surname" class="form-input input-lg">
+        <br><br>
+        <label class="form-label label-lg">zona</label>
+        <br>
+        <select name="zone" class="form-select select-lg">
+            <?php for ($i = 1; $i <= 3; $i++): ?>
+            <option><?=$i?></option>
+            <?php endfor;?>
+        </select>
+        <br>
+        <label class="form-label label-lg">ticket type</label>
+        <br>
+        <select name="ticket_type" class="form-select select-lg">
+            <option value="one-way">one-way ticket</option>
+            <option value="hourly">hourly ticket</option>
+            <option value="day">day ticket</option>
+        </select>
+        <br>
+        <label class="form-label label-lg">quantity</label>
+        <br>
+        <select name="quantity" class="form-select select-lg">
+            <?php for ($i = 1; $i <= 5; $i++): ?>
+                <option><?=$i?></option>
+            <?php endfor;?>
+        </select>
+        <br><br>
+        <input class="btn form-input input-lg" type="submit" value="calc">
+    </form>
+</div>
+</body>
+</html>
